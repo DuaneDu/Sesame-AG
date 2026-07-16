@@ -749,7 +749,7 @@ class MainActivity : ComponentActivity() {
                 status = shellExecutorStatus(requesting),
                 policy = PermissionPolicy.MANUAL_CARD,
                 title = "Root/Shizuku 执行器",
-                description = "用于诊断和辅助命令，不影响普通自动任务；需要时再处理即可",
+                description = "用于诊断和辅助命令，不影响普通自动任务；需要时再处理即可 ",
                 actionLabel = if (isShizukuPermissionMissing()) "申请 Shizuku 授权" else null
             )
         )
