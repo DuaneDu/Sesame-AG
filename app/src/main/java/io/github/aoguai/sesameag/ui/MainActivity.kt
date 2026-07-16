@@ -102,13 +102,11 @@ class MainActivity : ComponentActivity() {
     private val autoCriticalPermissions = listOf(
         PermissionRequirement.MODULE_FILE,
         PermissionRequirement.MODULE_NOTIFICATION,
-        PermissionRequirement.LSPOSED_TARGET_SCOPE
     )
 
     private val manualPermissionOrder = listOf(
         PermissionRequirement.MODULE_FILE,
         PermissionRequirement.MODULE_NOTIFICATION,
-        PermissionRequirement.LSPOSED_TARGET_SCOPE,
         PermissionRequirement.MODULE_EXACT_ALARM,
         PermissionRequirement.TARGET_EXACT_ALARM,
         PermissionRequirement.MODULE_BATTERY,
@@ -694,14 +692,6 @@ class MainActivity : ComponentActivity() {
                 title = "模块通知",
                 description = "用于显示运行、异常和命令服务通知；授权后返回本页即可继续检查",
                 actionLabel = "申请通知权限"
-            ),
-            PermissionHealthItem(
-                requirement = PermissionRequirement.LSPOSED_TARGET_SCOPE,
-                status = lsposedScopeStatus(targetInstalled, requesting),
-                policy = PermissionPolicy.AUTO_CRITICAL,
-                title = "LSPosed 目标应用作用域",
-                description = "仅LSPosed 支持自动申请与校验作用域；首次使用请把目标应用加入作用域后重新打开目标应用或返回本页复查",
-                actionLabel = if (targetInstalled) "申请作用域" else null
             ),
             PermissionHealthItem(
                 requirement = PermissionRequirement.MODULE_EXACT_ALARM,

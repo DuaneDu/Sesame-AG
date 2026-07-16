@@ -142,7 +142,7 @@ fun ModuleStatusCard(
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
-                        text = "LSPatch、NPatch 等内置打包/补丁式分发不在支持维护范围内，运行时会被直接拦截。",
+                        text = "LSPatch、NPatch 等内置打包/补丁式分发已兼容。",
                         style = MaterialTheme.typography.titleSmall
                     )
                 }
